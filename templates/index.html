@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    form {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+    }
+    body{
+
+  background-image:url('aarifimg.jpeg');
+  /*background-color: grey;*/
+  /* padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px; */
+  /* border: 1px solid black; */
+    }
+
+    /* body {
+      background-color: rgba(14, 73, 190, 0.445);
+    } */
+
+    form{
+      border-radius: 100px;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+
+    form input{
+
+      border-radius: 20px;
+      padding: 20px 30px;
+      margin-bottom: 20px;
+
+    }
+
+    form button{
+      border-radius: 20px;
+      margin-bottom: 20px;
+
+    }
+
+  </style>
+
+
+
+</head>
+
+<body>
+  <div class="container">
+    <form action="{{ url_for('predict')}}" method="post">
+      <h1>KNN FROM SCRATCH</h1>
+
+      <input type="number" id="num1" placeholder="Enter num1" name="1">
+
+      <input type="number" id="num2" placeholder="Enter num2" name="2">
+
+
+      <button type="submit">Classify</button>
+    <br>
+      {{ prediction_text }}
+    <br>
+    </form>
+
+  </div>
+
+
+</body>
+</html>
